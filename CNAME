@@ -1,4 +1,1 @@
-type: CNAME
-host: www.ray-tsai.com
-answer: mingjuitsai.github.io
-TTL: 300
+ray-tsai.com
