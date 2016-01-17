@@ -1,5 +1,6 @@
 
 
+/*----------  List  ----------*/
 
 ul, ol {
   margin: 15px 0;
@@ -20,6 +21,12 @@ ol ul, ul ol, ul ul, ol ol {
 
 ul ul, ol ul {
   list-style-type: circle;
+}
+
+/*----------  Media  ----------*/
+
+figure {
+  margin-bottom: ms(0);
 }
 
 img {

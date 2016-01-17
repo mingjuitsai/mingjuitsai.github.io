@@ -36,12 +36,12 @@ small, .font_small {font-size: 0.889em;}
 
 /*----------  Links  ----------*/
 a {
-  color: $black;
+  color: $purple;
   text-decoration: none;
   cursor: pointer;
   transition: color 80ms ease-out;
   &:hover, &:active {
-    color: $purple;
+    color: #566CCE;
     text-decoration: none;
   }
 }
