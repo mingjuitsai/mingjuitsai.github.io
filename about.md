@@ -42,6 +42,7 @@ Currently, he works full-time at [PLOT Media](http://plot.net.au) as web develop
 ### Contact
 
 - Email: [connect@ray-tsai.com](mailto:connect@ray-tsai.com) 
+- Linkedin: [http://au.linkedin.com/in/mingraytsai](http://au.linkedin.com/in/mingraytsai)
 - Facebook: [https://www.facebook.com/connectraytsai](https://www.facebook.com/connectraytsai) 
 - Twitter: [https://twitter.com/MingRayTsai](https://twitter.com/MingRayTsai) 
 - GitHub: [https://github.com/mingjuitsai](https://github.com/mingjuitsai) 
