@@ -1,0 +1,48 @@
+
+html {
+	font-size: 1em;
+}
+
+body {
+  font-family: $font-book;
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: #333;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.602em;
+}
+
+h2 {font-size: 1.424em;}
+
+h3 {font-size: 1.266em;}
+
+h4 {font-size: 1.125em;}
+
+small, .font_small {font-size: 0.889em;}
+
+/*----------  Links  ----------*/
+a {
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 80ms ease-out;
+  &:hover, &:active {
+    color: $purple;
+    text-decoration: none;
+  }
+}
+
