@@ -12,7 +12,7 @@ Afterwards, he ventured forward as a sole trader to provide various digital stra
 
 Currently, he works full-time at [PLOT Media](http://plot.net.au) as web developer handling web front-end strategy, web content delivery solutions, search engine optimisation, e-commerce solutions, responsive web, website performance optimisation and office snacks supplies! 
 
-This website is built with Jekyll, Sass, Modular Scale, and hosted by GitHub page.
+This website is built with Jekyll, Sass, Modular Scale, deployed with Git and hosted by GitHub page.
 
 ### Key Skills
 - HTML5 
