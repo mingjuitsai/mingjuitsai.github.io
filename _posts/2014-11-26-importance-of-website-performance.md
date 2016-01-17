@@ -4,10 +4,11 @@ title: "Importance of website performance: Should I understand it?"
 published: true
 ---
 
+Website performance sounds like something technical should be handled by web developers. Would it actually be important for designers or project managers to understand what it means?
+
 <figure>
 	<img src="{{ site.baseurl }}/images/website-performance.jpg" alt="Website Performance">
 </figure>
-Website performance sounds like something technical should be handled by web developers. Would it actually be important for designers or project managers to understand what it means?
 
 ### What is website performance?
 It is more than just page load time, it is also perceived latency. I think good website performance is about delivering the most useful experience, meeting users’ expectations and providing the essential information in a fast, intuitive fashion.
