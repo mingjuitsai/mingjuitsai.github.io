@@ -13,5 +13,8 @@
 
 
 
-.entry {
+.divider {
+	padding-bottom: ms(8);
+	margin-bottom: ms(8);
+	border-bottom: 1px solid $lightGray;
 }
