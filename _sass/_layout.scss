@@ -2,18 +2,18 @@
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  max-width: ms(33);
+  padding: 0 ms(3);
   width: 100%;
 }
 
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: ms(8);
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: ms(7) 0 ms(5);
   border-bottom: 1px solid $lightGray;
 
   @include mobile {
@@ -50,7 +50,7 @@
 
 .site-name {
   font-family: $font-book;
-  margin-bottom: ms(-4);
+  margin-bottom: ms(-10);
   color: $darkGray;
   cursor: pointer;
   font-weight: 300;
