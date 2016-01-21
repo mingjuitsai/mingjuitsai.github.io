@@ -2,7 +2,9 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
+
 
 Ray is a web developer / designer who believes that digital solutions should be built for the future, be easily maintainable and scalable. He loves the process of creating [Beautiful design](http://www.awwwards.com/) and strives for [Meaningful and creative solutions](https://designtoimprovelife.dk/).
 
@@ -15,8 +17,10 @@ Currently, he works full-time at [PLOT Media](http://plot.net.au) as web develop
 This website is built with Jekyll, Sass, Modular Scale, deployed with Git and hosted by GitHub page.
 
 ### Key Skills
-- HTML5 
+- HTML5
 - CSS3 
+- Sass
+- Less
 - Git
 - PHP
 - WordPress
