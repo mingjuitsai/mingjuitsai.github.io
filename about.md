@@ -29,10 +29,11 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git and ho
 - Responsive Web
 
 ### Tools
-- Terminal 
+- Terminal / Commane line
 - Sublime Text
 - Transmit 
 - Gulp
+- NPM
 - Google Chrome
 
 ### Passions
