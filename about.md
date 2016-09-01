@@ -18,7 +18,7 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git and ho
 
 ### Key Skills
 - HTML5
-- CSS3 
+- CSS
 - Sass
 - Less
 - Git
@@ -26,12 +26,16 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git and ho
 - WordPress
 - Javascript
 - jQuery
+- Angular JS
 - Responsive Web
+- Performance optimisation
 
-### Tools
+### Tools / Workflow
 - Terminal / Commane line
 - Sublime Text
 - Transmit 
+- VirtualBox
+- Composer
 - Gulp
 - NPM
 - Google Chrome
