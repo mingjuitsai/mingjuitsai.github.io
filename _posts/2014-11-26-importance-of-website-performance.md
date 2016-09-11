@@ -7,7 +7,7 @@ published: true
 Website performance sounds like something technical should be handled by web developers. Would it actually be important for designers or project managers to understand what it means?
 
 <figure>
-	<img src="{{ site.baseurl }}/images/website-performance.jpg" alt="Website Performance">
+	<img src="{{ site.baseurl }}/images/website-performance.png" alt="Website Performance">
 </figure>
 
 ### What is website performance?

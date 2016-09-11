@@ -51,7 +51,7 @@ Unqiuely designed WordPress responsive theme developed with Vimeo API calls, Mas
 <div class="divider"></div>
 
 <figure>
-	<img src="{{ site.baseurl }}/images/exit-films-16-9.png" alt="Exit Films">
+	<img src="{{ site.baseurl }}/images/exit-films-16-9.jpg" alt="Exit Films">
 </figure>
 ### Exit Films
 Transforming the previous WordPress theme into a fully responsive, scalable website by creating semantic HTML, rebuilding CSS structure and updating codebase system. Website typography became more readable with consistent line height, modular scaling font size and consistent paragraph margins.

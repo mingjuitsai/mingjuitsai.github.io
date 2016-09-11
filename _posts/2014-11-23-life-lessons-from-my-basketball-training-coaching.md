@@ -7,7 +7,7 @@ published: true
 I have joined Melbourne University Basketball Club’s domestic competition program for over two years, also started coaching for their domestic B grade women team run by CYMS since the 2014 winter season. I would like to share the life lessons I have learned so far both as a player and a coach.
 
 <figure>
-	<img src="{{ site.baseurl }}/images/basketball-training-mubc.jpg" alt="Basketball Training MUBC">
+	<img src="{{ site.baseurl }}/images/basketball-training-mubc.png" alt="Basketball Training MUBC">
 </figure>
 
 ### Set Specific Goals
