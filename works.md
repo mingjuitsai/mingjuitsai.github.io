@@ -5,7 +5,7 @@ permalink: /works/
 ---
 
 <figure>
-	<img src="{{ site.baseurl }}/images/plot-media-16-9.png" alt="PLOT Media">
+	<img src="{{ site.baseurl }}/images/plot-media-16-9.jpg" alt="PLOT Media">
 </figure>
 ### PLOT Media 
 Fully responsive WordPress website developed with Vimeo API calls, Google Map API modules and many customised animating transition with CSS3. Codebase follows semantic HTML standard for SEO, robust and modular CSS structure to reduce load time as well as development time. This website is fully customised design by in-house PLOT Media designer.
