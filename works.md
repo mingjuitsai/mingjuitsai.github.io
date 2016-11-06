@@ -13,10 +13,11 @@ permalink: /works/
 **Piermont Retreat** - Static website built with [Jekyll](https://jekyllrb.com/) to be easily updatable by the developers as a static site. Fully responsive with custom-made unique grid. For footer local report, implemented Google MAP API timezone data to calculate current time in Tasmania including day-light saving and implemented Yahoo weather API for current weather. Elegant fade-in effect when users scroll down.
 
 <ul class="skills-list">
+  <li>JavaScript</li>
+  <li>Ajax</li>
+  <li>Sass</li>
   <li>HTML</li>
   <li>CSS</li>
-  <li>Sass</li>
-  <li>JavaScript</li>
   <li>Jekyll</li>
   <li>Git</li>
   <li>Gulp</li>
@@ -35,6 +36,38 @@ permalink: /works/
 <div class="divider"></div>
 
 
+<!-- WFS -->
+<figure>
+  <a target="_blank" href="https://worldfaerysociety.org/">
+   <img src="{{ site.baseurl }}/images/world-faery-society-16-9.jpg" alt="World Faery Society">
+  </a>
+</figure>
+**World Faery Society** - Web interactive app based on Angular JS. Data is retrieved by WordPress REST API and integrated with social aggregator Stackla widgets to insert data. Fully responsive across various devices. Users can submit their story content via an ajax form that sends data to WordPress via WordPress REST API.
+
+<ul class="skills-list">
+  <li>Angular JS</li>
+  <li>JavaScript</li>
+  <li>Ajax</li>
+  <li>jQuery</li>
+  <li>Stackla API</li>
+  <li>WordPress REST API</li>
+  <li>Sass</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>PHP</li>
+  <li>CURL</li>  
+  <li>Git</li>
+  <li>Gulp</li>
+  <li>Responsive Web</li>
+  <li>Performance Optimisation</li> 
+</ul>
+
+<a target="_blank" class="button-default" href="https://worldfaerysociety.org/">
+  View website
+</a>
+
+<div class="divider"></div>
+
 <!-- PLOT -->
 <figure>
   <a target="_blank" href="http://plot.net.au">
@@ -44,13 +77,13 @@ permalink: /works/
 **Plot Media** - Fully responsive WordPress website developed with Vimeo API calls, Google Map API modules and many customised animating transition with CSS3. Codebase follows semantic HTML standard for SEO, robust and modular CSS structure to reduce load time as well as development time. This website is fully customised design by in-house PLOT Media designer.
 
 <ul class="skills-list">
+  <li>WordPress</li>
+  <li>JavaScript</li>
+  <li>Sass</li>
   <li>HTML</li>
   <li>CSS</li>
-  <li>Sass</li>
-  <li>JavaScript</li>
   <li>jQuery</li>
   <li>PHP</li>
-  <li>WordPress</li>
   <li>Git</li>
   <li>Gulp</li>
   <li>NPM</li>
@@ -105,13 +138,13 @@ permalink: /works/
 **Exit Films** - Transforming the previous WordPress theme into a fully responsive, scalable website by creating semantic HTML, rebuilding CSS structure and updating codebase system. Website typography became more readable with consistent line height, modular scaling font size and consistent paragraph margins.
 
 <ul class="skills-list">
+  <li>WordPress</li>
+  <li>JavaScript</li>
+  <li>Sass</li>
   <li>HTML</li>
   <li>CSS</li>
-  <li>Sass</li>
-  <li>JavaScript</li>
   <li>jQuery</li>
   <li>PHP</li>
-  <li>WordPress</li>
   <li>Git</li>
   <li>Gulp</li>
   <li>NPM</li>
