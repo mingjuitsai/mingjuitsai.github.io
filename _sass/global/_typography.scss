@@ -44,8 +44,9 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: color 80ms ease-out;
+  
   &:hover, &:active {
-    color: #566CCE;
+    color: $lightPurple;
     text-decoration: none;
   }
 }

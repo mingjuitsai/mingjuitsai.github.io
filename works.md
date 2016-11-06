@@ -11,21 +11,24 @@ permalink: /works/
 </figure>
 *PLOT Media* - Fully responsive WordPress website developed with Vimeo API calls, Google Map API modules and many customised animating transition with CSS3. Codebase follows semantic HTML standard for SEO, robust and modular CSS structure to reduce load time as well as development time. This website is fully customised design by in-house PLOT Media designer.
 
-[view website](http://plot.net.au/){:target="_blank"}
+<ul class="skills-list">
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>jQuery</li>
+  <li>PHP</li>
+  <li>WordPress</li>
+  <li>Git</li>
+  <li>Gulp</li>
+  <li>Viemo API</li>
+  <li>Google Map API</li>
+  <li>Responsive Web</li>
+  <li>Performance Optimisation</li> 
+</ul>
 
-- HTML5
-- CSS3
-- RESPONSIVE WEB
-- GOOGLE MAP API
-- JAVASCRIPT
-- JQUERY
-- PHP
-- SEO
-- VIMEO API
-- WORDPRESS
-- WPO
-- GIT
-- GULP
+<a target="_blank" class="button-default" href="http://plot.net.au">
+  View website
+</a>
 
 <div class="divider"></div>
 

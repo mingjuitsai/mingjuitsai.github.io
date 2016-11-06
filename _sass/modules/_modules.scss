@@ -13,3 +13,65 @@
     margin-bottom: ms(8);
     border-bottom: 1px solid $lightGray;
 }
+
+
+/*----------  Buttons  ----------*/
+@mixin proto-button($type, $button-base: 16px) {
+  display: inline-table;
+  min-width: em(205px, $button-base);
+  margin-bottom: 1rem;
+  padding: em(10px, $button-base) em(15px, $button-base);
+  -webkit-appearance: none;
+  // Style
+  text-align: center;
+  border: 0;
+  font-size: em($button-base);
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  border-radius: .5em;
+  
+  // Default
+  @if(str-index($type, 'default')) {
+    background-color: transparent;
+    border: solid 1px $purple;
+    color: $purple;
+    &:hover {
+      color: $lightPurple;
+      border-color: $lightPurple;
+    }
+  }
+
+  // Primary
+  @if(str-index($type, 'primary')) {
+    background-color: $blue;
+    transition: background-color 400ms $easeOutSine;
+    &:hover {
+      background-color: darken($blue, 5%);
+    }
+  }
+}
+
+.button-default {
+  @include proto-button(default);
+}
+.button-primary {
+  @include proto-button(primary);
+}
+
+
+
+/*----------  List  ----------*/
+.skills-list {
+  padding-left: 0;
+
+  > li {
+    display: inline-block;
+    margin-bottom: .5em;
+    margin-right: .4em;
+    background-color: $lighterGray;
+    border: solid 1px $lightGray;
+    border-radius: .2em;
+    padding: .4em 1em;
+  }
+}
