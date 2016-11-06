@@ -38,13 +38,17 @@ em {
   font-style: italic;
 }
 
+strong {
+  font-weight: 400;
+}
+
 /*----------  Links  ----------*/
 a {
   color: $purple;
   text-decoration: none;
   cursor: pointer;
   transition: color 80ms ease-out;
-  
+
   &:hover, &:active {
     color: $lightPurple;
     text-decoration: none;

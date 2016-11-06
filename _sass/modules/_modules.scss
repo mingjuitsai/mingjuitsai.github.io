@@ -20,7 +20,7 @@
   display: inline-table;
   min-width: em(205px, $button-base);
   margin-bottom: 1rem;
-  padding: em(10px, $button-base) em(15px, $button-base);
+  padding: em(9px, $button-base) em(15px, $button-base);
   -webkit-appearance: none;
   // Style
   text-align: center;
@@ -64,14 +64,17 @@
 /*----------  List  ----------*/
 .skills-list {
   padding-left: 0;
+  font-size: 0.9375em;
 
   > li {
     display: inline-block;
     margin-bottom: .5em;
     margin-right: .4em;
+    padding: .4em 1em;
+    // style
     background-color: $lighterGray;
     border: solid 1px $lightGray;
     border-radius: .2em;
-    padding: .4em 1em;
+    text-align: center;
   }
 }
