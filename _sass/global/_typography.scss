@@ -33,6 +33,11 @@ h4 {font-size: 1.125em;}
 
 small, .font_small {font-size: 0.889em;}
 
+em {
+  color: $purple;
+  font-style: italic;
+}
+
 /*----------  Links  ----------*/
 a {
   color: $purple;

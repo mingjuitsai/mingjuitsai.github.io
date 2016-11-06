@@ -38,8 +38,8 @@ google_analytics:
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: https://ray-tsai.com
-
-baseurl: "https://ray-tsai.com"
+host:    127.0.0.1
+baseurl: ""
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -52,6 +52,7 @@ version: v1.1.0
 
 # Set the Sass partials directory, as we're using @imports
 sass:
+  sass_dir: _sass
   style: :compressed # You might prefer to minify using :compressed
 
 # Use the following plug-ins

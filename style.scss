@@ -6,17 +6,12 @@
 ===============================*/
 
 @import "modular-scale";
-@import "variables";
-@import "mixins";
-@import "extensions";
-@import "reset";
-@import "base";
-@import "typography";
-@import "modules";
-@import "layout";
+@import "global/global";
+// Modules
+@import "modules/modules";
+@import "modules/svg-icons";
+// Layout
+@import "layout/layout";
+// Resp
 @import "resp";
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
