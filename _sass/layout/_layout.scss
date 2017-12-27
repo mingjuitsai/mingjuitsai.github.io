@@ -1,6 +1,15 @@
 /* Shell */
+.site {
+    min-height: 100%;
+}
+
+.main {
+    margin-bottom: 50px;
+}
+
 .container {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     max-width: ms(33);
     padding: 0 ms(3);
     width: 100%;
@@ -138,8 +147,13 @@ nav {
 }
 
 /* Footer */
+.footer-push {
+    height: 75px;
+}
+
 .wrapper-footer {
-    margin-top: 50px;
+    height: 75px;
+    margin-top: -75px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background-color: $lightGray;
