@@ -48,25 +48,25 @@ var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element
     var descs = select_all('.site-description__typing-heading');
     var descs_szko = [];
 
+    // Init Szko typing effect
+    // push current heading into heading array data
     descs.forEach( function(desc, index) {
       descs_szko.push(new Szko(desc));
       headings.push(desc.textContent);
     });
 
-    // Start
+    // Start animation loop
     setInterval(function() {
+      // Grab random szko instance
       var rand_index = Math.round((Math.random() * (descs_szko.length - 1)));
-
+      // Find filtered heading
       var filtered_heading = headings.filter(function(val) {
         return descs_szko.findIndex(function(szko) { return szko.ele.textContent === val }) === -1;
       });
-
+      // Get next random heading
       var rand_index_heading = Math.round((Math.random() * (filtered_heading.length - 1)));
       var next_heading = filtered_heading[rand_index_heading];
-
-      console.log(rand_index_heading);
-      console.log(next_heading);
-
+      // Do the typing effect magic
       descs_szko[rand_index].delete().then(function(szko) {
         setTimeout(function() {
           szko.type(next_heading);
