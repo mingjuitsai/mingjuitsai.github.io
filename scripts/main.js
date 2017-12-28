@@ -56,7 +56,14 @@ var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element
     });
 
     // Start animation loop
-    setInterval(function() {
+    // Fire a quick one then slow it down...
+    setTimeout(function() {
+      update_description_randomly();
+
+      setInterval(update_description_randomly, 8000);
+    }, 4000);
+
+    function update_description_randomly() {
       // Grab random szko instance
       var rand_index = Math.round((Math.random() * (descs_szko.length - 1)));
       // Find filtered heading
@@ -72,8 +79,7 @@ var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element
           szko.type(next_heading);
         }, 50);
       });
-
-    }, 4000);
+    }
 
 
   }
