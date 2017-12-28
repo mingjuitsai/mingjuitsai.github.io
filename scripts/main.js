@@ -6,22 +6,32 @@
  * Plugin
  */
 // Szko, simple Promise style typing effect
-var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element?t:document.querySelector(t),this.initial_string=this.ele.textContent,this["delete"]=function(){var t=this,e=t.ele.textContent,i=new Promise(function(i,o){function s(){c>0?(e=e.slice(0,-1),t.ele.textContent=e,c--,setTimeout(function(){s()},n)):i(t)}var c=e.length;s()});return i},this.type=function(t){var e=this;if(!e.ele.textContent.length){new Promise(function(i,o){function s(){c<t.length?(e.ele.textContent+=t.charAt(c),c++,setTimeout(function(){s()},n)):i(e)}var c=0;s()})}}};
+var Szko=function(e,t){var n=t&&t.speed?t.speed:50;this.ele=e instanceof Element?e:document.querySelector(e),this.initial_string=this.ele.textContent,this["delete"]=function(){var e=this,t=e.ele.textContent,i=new Promise(function(i,s){function o(){l>0?(t=t.slice(0,-1),e.ele.textContent=t,l--,e.ele.classList.contains("removing")||e.ele.classList.add("removing"),setTimeout(function(){o()},n)):(e.ele.classList.contains("removing")&&e.ele.classList.remove("removing"),i(e))}var l=t.length;o()});return i},this.type=function(e){var t=this;if(!t.ele.textContent.length){new Promise(function(i,s){function o(){l<e.length?(t.ele.textContent+=e.charAt(l),l++,t.ele.classList.contains("typing")||t.ele.classList.add("typing"),setTimeout(function(){o()},n)):(t.ele.classList.contains("typing")&&t.ele.classList.remove("typing"),i(t))}var l=0;o()})}}};
 
 /**
- * Start
+ * Helpers
+ */
+function nodeList_to_array(nodeList) {
+  return Array.prototype.slice.call(nodeList);
+}
+
+function select_all(q) {
+  return nodeList_to_array(document.querySelectorAll(q));
+}
+
+// Media element add-on
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+  get: function(){
+      return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+  }
+});
+
+
+
+/**
+ * App Start
  */
 (function() {
-  /**
-   * Helpers
-   */
-  function nodeList_to_array(nodeList) {
-    return Array.prototype.slice.call(nodeList);
-  }
-
-  function select_all(q) {
-    return nodeList_to_array(document.querySelectorAll(q));
-  }
 
   document.addEventListener('DOMContentLoaded', DOM_ready);
 
@@ -32,6 +42,7 @@ var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element
   // DOM Ready
   function DOM_ready() {
     start_descriptions_animation();
+    handle_workItem_videos();
   }
 
   // Events
@@ -51,7 +62,9 @@ var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element
     // Init Szko typing effect
     // push current heading into heading array data
     descs.forEach( function(desc, index) {
-      descs_szko.push(new Szko(desc));
+      descs_szko.push(new Szko(desc, {
+        speed: 30
+      }));
       headings.push(desc.textContent);
     });
 
@@ -80,7 +93,42 @@ var Szko=function(t,e){var n=e&&e.speed?e.speed:50;this.ele=t instanceof Element
         }, 50);
       });
     }
+  }
 
+  function handle_workItem_videos() {
+    var scroller = scrollama();
+    scroller.setup({
+      step: '.work-item__video', // required,
+    })
+    .onStepEnter(handleVideoEnter)
+    .onStepExit(handleVideoExit);
+
+
+    function handleVideoEnter(data) {
+      var video = data.element;
+
+      video.classList.add('in-view');
+
+      if(video.played && video.paused) {
+        video.play();
+      } else {
+        video.addEventListener('canplay', function() {
+          video.play();
+        });
+      }
+    }
+
+    function handleVideoExit(data) {
+      var video = data.element;
+      
+      video.classList.remove('in-view');
+
+      var video = data.element;
+      if(video.playing) {
+        video.pause();
+      }
+    }
 
   }
+
 })();

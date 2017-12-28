@@ -44,6 +44,33 @@ iframe {
   max-width: 100%;
 }
 
+video {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* Hide iPhone video play button */
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;

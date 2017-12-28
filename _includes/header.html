@@ -15,9 +15,15 @@
       </div>
 
       <nav class="main-nav">
-        <a href="{{ site.baseurl }}/works">Works</a>
-        <a href="{{ site.baseurl }}/about">About</a>
-        <a href="{{ site.baseurl }}/">Blog</a>
+        <ul class="menu">
+           {% for item in site.data.navigation.items %}
+              <li class="{% if item.url == page.url %}active{% endif %}">
+                <a href="{{ item.url }}" alt="{{ item.title }}">
+                  {{ item.title }}
+                </a>
+              </li>
+           {% endfor %}
+        </ul>
       </nav>
     </header>
   </div>

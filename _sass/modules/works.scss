@@ -1,0 +1,11 @@
+.work-item {
+  &__video {
+    opacity: .7;
+    transition: opacity .4s ease-out;
+    margin-bottom: 1em;
+
+    &.in-view {
+      opacity: 1;
+    }
+  }
+}
