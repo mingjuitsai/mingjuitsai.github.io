@@ -21,12 +21,13 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git FTP an
 - CSS
 - Sass
 - Less
-- Git
-- PHP
-- WordPress
 - Javascript
 - jQuery
 - Angular JS
+- Vue JS
+- Git
+- PHP
+- WordPress
 - Responsive Web
 - Performance optimisation
 
@@ -37,6 +38,7 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git FTP an
 - VirtualBox
 - Composer
 - Gulp
+- Webpack
 - NPM
 - Google Chrome
 
@@ -55,6 +57,5 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git FTP an
 - Email: [connect@ray-tsai.com](mailto:connect@ray-tsai.com) 
 - Linkedin: [http://au.linkedin.com/in/mingraytsai](http://au.linkedin.com/in/mingraytsai)
 - Facebook: [https://www.facebook.com/connectraytsai](https://www.facebook.com/connectraytsai) 
-- Twitter: [https://twitter.com/MingRayTsai](https://twitter.com/MingRayTsai) 
 - GitHub: [https://github.com/mingjuitsai](https://github.com/mingjuitsai) 
-- StackOverflow: [http://stackoverflow.com/users/976341/ray-tsai](http://stackoverflow.com/users/976341/ray-tsai)
+- CodePen: [https://codepen.io/raytsai/)

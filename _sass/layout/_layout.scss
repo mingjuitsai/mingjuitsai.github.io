@@ -84,6 +84,10 @@
     }
 
     @include mobile {
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin: 3px 0;
     }
 }
