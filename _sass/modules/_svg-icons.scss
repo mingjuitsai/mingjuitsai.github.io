@@ -1,6 +1,12 @@
 .svg-icon {
   width: 28px;
   height: 28px;
-  margin-right: .4em;
+  margin-right: .6em;
   display: inline-block;
+  opacity: .55;
+  transition: opacity .1s ease-out;
+
+  &:hover {
+    opacity: .7;
+  }
 }

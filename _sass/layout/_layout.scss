@@ -76,6 +76,13 @@
     color: $gray;
     font-size: 16px;
 
+    &__typing-heading:not(:last-child)::after {
+        $spacing: .2em;
+        content: '/';
+        display: inline-block;
+        margin: 0 calc(#{$spacing} - 2px) 0 $spacing;
+    }
+
     @include mobile {
         margin: 3px 0;
     }
@@ -147,19 +154,26 @@ nav {
 }
 
 /* Footer */
+$footer-height: 80px;
+
 .footer-push {
-    height: 75px;
+    height: $footer-height;
 }
 
 .wrapper-footer {
-    height: 75px;
-    margin-top: -75px;
+    height: $footer-height;
+    margin-top: -$footer-height;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background-color: $lightGray;
 }
 
-footer {
-    padding: 20px 0;
-    text-align: center;
+.footer {
+    @include clearfix;
+    padding: 23px 0;
+}
+
+.footer__socials {
+    float: right;
+    clear: right;
 }
