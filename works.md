@@ -54,11 +54,12 @@ permalink: /works/
   </video>
 </a>
 <p>
-  <strong>Ratpak</strong> - WooCommerce WordPress website with custom design. Various dynamic features including landing page shop gallery. Product item unique fixed position product information. Custom Ajax mailChimp sign up newsletter.
+  <strong>Ratpak</strong> - Fully responsive custom-made design WordPress WooCommerce theme. Smooth products filter animation to filter product categories in shop page. Unique fixed-position product information layout sitting aside gallery. Footer fitted with ajax mailChimp sign-up form.
 </p>
 
 <ul class="skills-list">
   <li>JavaScript</li>
+  <li>jQuery</li>
   <li>Ajax</li>
   <li>Sass</li>
   <li>HTML</li>
@@ -90,19 +91,22 @@ permalink: /works/
   </video>
 </a>
 <p>
-  <strong>Monash - answers international</strong> - Static website built with multiple-language translations. Dynamic pop-up videos playing current language video with YouTube API.
+  <strong>Monash - answers international</strong> - Static website built with Pug templating engine with multiple language translations. Automated NodeJS task-running script made to input all translations in single JSON file. Pop-up video is dynamically generated to match user's currently selected language. Custom-made form validation and animation for submitting interests in applying for admissions at Monash, which synced with FormStack form tracking.
 </p>
 
 <ul class="skills-list">
   <li>JavaScript</li>
+  <li>jQuery</li>
+  <li>YoutTube API</li>
   <li>Ajax</li>
   <li>Sass</li>
-  <li>HTML</li>
   <li>CSS</li>
-  <li>PHP</li>
+  <li>HTML</li>
+  <li>Pug</li>
   <li>Git</li>
   <li>Gulp</li>
   <li>NPM</li>
+  <li>NodeJS</li>
   <li>Responsive Web</li>
   <li>Performance Optimisation</li> 
 </ul>
