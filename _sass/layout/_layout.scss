@@ -10,7 +10,7 @@
 .container {
     margin-right: auto;
     margin-left: auto;
-    max-width: ms(33);
+    max-width: 50em;
     padding: 0 ms(3);
     width: 100%;
 }
@@ -59,7 +59,7 @@
 
 .site-name {
     font-family: $font-book;
-    margin-bottom: ms(-10);
+    margin-bottom: .5em;
     color: $darkGray;
     cursor: pointer;
     font-weight: 300;
@@ -74,7 +74,7 @@
 .site-description {
     margin: -5px 0 0 0;
     color: #525252;
-    font-size: 1em;
+    font-size: .95em;
 
     &__typing-heading {
         opacity: 1;
