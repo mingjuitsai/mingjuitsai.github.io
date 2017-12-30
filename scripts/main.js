@@ -99,32 +99,42 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
     var scroller = scrollama();
     scroller.setup({
       step: '.work-item__video', // required,
+      offset: .3
     })
     .onStepEnter(handleVideoEnter)
     .onStepExit(handleVideoExit);
 
 
     function handleVideoEnter(data) {
-      var video = data.element;
+      console.log('handleVideoEnter');
+      var video_container = data.element;
+      var video = video_container.querySelector('video');
 
-      video.classList.add('in-view');
+      video_container.classList.add('in-view');
 
       if(video.played && video.paused) {
+        console.log('play 1');
+        video.play();
+      } else if (video.readyState >= video.HAVE_FUTURE_DATA) {
+        console.log('play 2');
         video.play();
       } else {
         video.addEventListener('canplay', function() {
+          console.log('play 3');
           video.play();
         });
       }
     }
 
     function handleVideoExit(data) {
-      var video = data.element;
-      
-      video.classList.remove('in-view');
+      console.log('handleVideoExit');
+      var video_container = data.element;
+      var video = video_container.querySelector('video');
 
-      var video = data.element;
+      video_container.classList.remove('in-view');
+
       if(video.playing) {
+        console.log('video paused');
         video.pause();
       }
     }
