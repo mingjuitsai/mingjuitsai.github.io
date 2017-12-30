@@ -6,7 +6,7 @@ published: true
 ---
 
 
-Ray is a web developer / designer who believes that digital solutions should be built for the future, be easily maintainable and scalable. He loves the process of creating [Beautiful design](http://www.awwwards.com/) and strives for [Meaningful and creative solutions](https://designtoimprovelife.dk/).
+**Ray** is a web developer / designer who believes that digital solutions should be built for the future, be easily maintainable and scalable. He loves the process of creating [Beautiful design](http://www.awwwards.com/) and strives for [Meaningful and creative solutions](https://designtoimprovelife.dk/).
 
 He started out at [FOX SPORTS PULSE](http://www.foxsportspulse.com/) as a web developer, and was responsible for creating various sport associations’, clubs’ and teams’ websites, enhancing websites’ users experiences, developing new web templates and scalable modules for more productive workflow and providing technical supports for web-related issues for two years.
 
@@ -54,8 +54,8 @@ This website is built with Jekyll, Sass, Modular Scale, deployed with Git FTP an
 
 ### Contact
 
-- Email: [connect@ray-tsai.com](mailto:connect@ray-tsai.com) 
-- Linkedin: [http://au.linkedin.com/in/mingraytsai](http://au.linkedin.com/in/mingraytsai)
-- Facebook: [https://www.facebook.com/connectraytsai](https://www.facebook.com/connectraytsai) 
-- GitHub: [https://github.com/mingjuitsai](https://github.com/mingjuitsai) 
-- CodePen: [https://codepen.io/raytsai/)
+- [Email](mailto:connect@ray-tsai.com) 
+- [Linkedin](http://au.linkedin.com/in/mingraytsai)
+- [Facebook](https://www.facebook.com/connectraytsai) 
+- [GitHub](https://github.com/mingjuitsai) 
+- [CodePen](https://codepen.io/raytsai/)
