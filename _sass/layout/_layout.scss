@@ -59,7 +59,7 @@
 
 .site-name {
     font-family: $font-book;
-    margin-bottom: .5em;
+    margin-bottom: .4em;
     color: $darkGray;
     cursor: pointer;
     font-weight: 300;
@@ -175,6 +175,14 @@ nav {
     .read-more {
         text-transform: uppercase;
         font-size: 15px;
+    }
+}
+
+.post-title > a {
+    color: #1d1d1d;
+
+    &:hover {
+        color: $lightPurple;
     }
 }
 

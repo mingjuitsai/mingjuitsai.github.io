@@ -4,9 +4,6 @@ title: About
 permalink: /about/
 published: true
 ---
-<figure class="site-avatar">
-  <img src="{{ site.avatar }}" />
-</figure>
 
 Ray is a web developer / designer who believes that digital solutions should be built for the future, be easily maintainable and scalable. He loves the process of creating [Beautiful design](http://www.awwwards.com/) and strives for [Meaningful and creative solutions](https://designtoimprovelife.dk/).
 

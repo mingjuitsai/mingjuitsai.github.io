@@ -68,7 +68,7 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
     // push current heading into heading array data
     descs.forEach( function(desc, index) {
       descs_szko.push(new Szko(desc, {
-        speed: 30
+        speed: 40
       }));
       headings.push(desc.textContent);
     });
@@ -111,35 +111,29 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
 
 
     function handleVideoEnter(data) {
-      console.log('handleVideoEnter');
       var video_container = data.element;
       var video = video_container.querySelector('video');
 
       video_container.classList.add('in-view');
 
       if(video.played && video.paused) {
-        console.log('play 1');
         video.play();
       } else if (video.readyState >= video.HAVE_FUTURE_DATA) {
-        console.log('play 2');
         video.play();
       } else {
         video.addEventListener('canplay', function() {
-          console.log('play 3');
           video.play();
         });
       }
     }
 
     function handleVideoExit(data) {
-      console.log('handleVideoExit');
       var video_container = data.element;
       var video = video_container.querySelector('video');
 
       video_container.classList.remove('in-view');
 
       if(video.playing) {
-        console.log('video paused');
         video.pause();
       }
     }
