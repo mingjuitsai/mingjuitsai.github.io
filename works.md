@@ -47,6 +47,43 @@ permalink: /works/
 
 
 
+<!-- MRI PRO -->
+<article class="work-item">
+  <h3>MRI PRO (Beta)</h3>
+  <a target="_blank" href="http://mripro.plot.net.au/">
+    <figure class="work-item__video">
+      <video src="{{ site.baseurl }}/videos/mripro.mp4" poster="{{ site.baseurl }}/images/mripro.jpeg">
+        Sorry, your browser doesn't support embedded videos.
+      </video>
+    </figure>
+  </a>
+<p>
+  A web app to help improve radiologist's skills to diagnose prostate cancer by reading through MRI case studies with quizzes. Users may purchase for full MRI cases access via Stripe. Built with Vue.js, Vuex, Vue Material Design with WordPress REST API serving as headless CMS providing data. The app processes payment via Stripe API. Custom DICOM viewer was built using <a target="_blank" href="https://github.com/ivmartel/dwv">DWV</a> in communication with AWS S3 to host DCM files. Site is only meant to be used in Desktop and Tablet, mobile optimisation was not required. Staging is hosted on Digital Ocean droplet.
+</p>
+
+<ul class="skills-list">
+  <li>JavaScript</li>
+  <li>Vue.js</li>
+  <li>Sass</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>Material Design</li>
+  <li>Git</li>
+  <li>NPM</li>
+  <li>Webpack</li>
+  <li>Stripe API</li>
+  <li>AWS S3</li>
+  <li>AWS</li>
+  <li>Digital Ocean</li>
+</ul>
+
+<a target="_blank" class="button-default" href="http://mripro.plot.net.au/demo">
+  Try demo
+</a>
+</article>
+
+<div class="divider"></div>
+
 
 <!-- Ratpak -->
 <article class="work-item">

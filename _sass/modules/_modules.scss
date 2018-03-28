@@ -36,18 +36,14 @@
     background-color: transparent;
     border: solid 1px $purple;
     color: $purple;
-    &:hover {
-      color: $lightPurple;
-      border-color: $lightPurple;
-    }
-  }
+    transition-property: background-color, color;
+    transition-duration: 100ms;
+    transition-timing-function: $easeOutSine;
 
-  // Primary
-  @if(str-index($type, 'primary')) {
-    background-color: $blue;
-    transition: background-color 400ms $easeOutSine;
     &:hover {
-      background-color: darken($blue, 5%);
+      color: white;
+      border-color: $lightPurple;
+      background-color: $lightPurple;
     }
   }
 }
@@ -76,5 +72,13 @@
     border: solid 1px $lightGray;
     border-radius: .2em;
     text-align: center;
+    cursor: default;
+    transition-property: background-color;
+    transition-duration: 120ms;
+    transition-timing-function: $easeOutSine;
+
+    &:hover {
+      background-color: darken($lighterGray, .8%);
+    }
   }
 }
