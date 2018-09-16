@@ -56,9 +56,7 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
       'Bball Devotee',
       'Coffee Lover',
       'Gaming Geek',
-      'NBA Follower',
-      'Travel Enthusiast',
-      'Chillhop Fan'
+      'Travel Enthusiast'
     ];
 
     var descs = select_all('.site-description__typing-heading');
