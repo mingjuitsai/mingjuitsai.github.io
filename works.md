@@ -49,7 +49,7 @@ permalink: /works/
 
 <!-- MRI PRO -->
 <article class="work-item">
-  <h3>MRI PRO (Beta)</h3>
+  <h3>MRI PRO</h3>
   <a target="_blank" href="http://mripro.plot.net.au/">
     <figure class="work-item__video">
       <video src="{{ site.baseurl }}/videos/mripro.mp4" poster="{{ site.baseurl }}/images/mripro.jpeg">
@@ -64,21 +64,59 @@ permalink: /works/
 <ul class="skills-list">
   <li>JavaScript</li>
   <li>Vue.js</li>
+  <li>Stripe API</li>
+  <li>AWS S3</li>
+  <li>AWS Cloudfront</li>
+  <li>Digital Ocean server</li>
   <li>Sass</li>
   <li>HTML</li>
   <li>CSS</li>
   <li>Material Design</li>
   <li>Git</li>
-  <li>NPM</li>
   <li>Webpack</li>
-  <li>Stripe API</li>
-  <li>AWS S3</li>
-  <li>AWS</li>
-  <li>Digital Ocean</li>
+  <li>PHP</li>
+  <li>WordPress</li>
 </ul>
 
 <a target="_blank" class="button-default" href="http://mripro.plot.net.au/demo">
   Try demo
+</a>
+</article>
+
+<div class="divider"></div>
+
+
+<!-- Truce -->
+<article class="work-item">
+<h3>Truce Films</h3>
+<a target="_blank" href="http://trucefilms.com/">
+  <figure class="work-item__video">
+    <video src="{{ site.baseurl }}/videos/truce-films.mp4" poster="{{ site.baseurl }}/images/truce-films.jpg">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </figure>
+</a>
+<p>
+  Fully responsive custom-made design WordPress theme. Viemo video API dynamic data synced to client Vimeo account. Custom full screen HTML5 video player UI. Google Map and Twitter API sync.
+</p>
+
+<ul class="skills-list">
+  <li>JavaScript</li>
+  <li>Vimeo API</li>
+  <li>Google Map API</li>
+  <li>Sass</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>PHP</li>
+  <li>WordPress</li>
+  <li>Git</li>
+  <li>Webpack</li>
+  <li>Responsive Web</li>
+  <li>Performance Optimisation</li> 
+</ul>
+
+<a target="_blank" class="button-default" href="https://ratpak.co/">
+  View website
 </a>
 </article>
 
@@ -110,8 +148,7 @@ permalink: /works/
   <li>WordPress</li>
   <li>WooCommerce</li>
   <li>Git</li>
-  <li>Gulp</li>
-  <li>NPM</li>
+  <li>Webpack</li>
   <li>Responsive Web</li>
   <li>Performance Optimisation</li> 
 </ul>
@@ -141,16 +178,14 @@ permalink: /works/
 
 <ul class="skills-list">
   <li>JavaScript</li>
-  <li>jQuery</li>
   <li>YoutTube API</li>
   <li>Ajax</li>
   <li>Sass</li>
   <li>CSS</li>
-  <li>HTML</li>
   <li>Pug</li>
+  <li>HTML</li>
   <li>Git</li>
-  <li>Gulp</li>
-  <li>NPM</li>
+  <li>Webpack</li>
   <li>NodeJS</li>
   <li>Responsive Web</li>
   <li>Performance Optimisation</li> 
