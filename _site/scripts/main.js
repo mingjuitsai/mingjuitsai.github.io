@@ -16,12 +16,12 @@ var Szko=function(e,t){var n=t&&t.speed?t.speed:50;this.ele=e instanceof Element
 /**
  * Helpers
  */
-function nodeList_to_array(nodeList) {
+function nodeListToArray(nodeList) {
   return Array.prototype.slice.call(nodeList);
 }
 
-function select_all(q) {
-  return nodeList_to_array(document.querySelectorAll(q));
+function querySelectorAll(q) {
+  return nodeListToArray(document.querySelectorAll(q));
 }
 
 // Media element add-on
@@ -53,13 +53,13 @@ Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
   // Events
   function start_descriptions_animation() {
     var headings = [
-      'Bball Devotee',
+      'BBaller',
       'Coffee Lover',
       'Gaming Geek',
-      'Travel Enthusiast'
+      'Degen Trader'
     ];
 
-    var descs = select_all('.site-description__typing-heading');
+    var descs = querySelectorAll('.site-description__typing-heading');
     var descs_szko = [];
 
     // Init Szko typing effect
