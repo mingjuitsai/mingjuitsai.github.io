@@ -1,9 +1,10 @@
 items:
-- title: Blog
-  url: /
-
 - title: About
-  url: /about/
+  url: /
 
 - title: Works
   url: /works/
+  
+- title: Blog
+  url: /blog/
+

@@ -14,7 +14,7 @@
     $Unit: nth($Bases, 1) * 0 + 1; // Extracts the unit from the base
     $Unitless-Bases: ();
     @each $Base in $Bases {
-      $Base: $Base/$Unit;
+      $Base: calc($Base/$Unit);
       $Unitless-Bases: join($Unitless-Bases, $Base);
     }
 

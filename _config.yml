@@ -14,8 +14,7 @@ avatar: https://avatars0.githubusercontent.com/u/4031732?v=3&s=460
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: connect@ray-tsai.com
-  facebook: connectraytsai
+  email: connect@mingjuitsai.com
   github: mingjuitsai
   linkedin: mingraytsai
   codepen: https://codepen.io/raytsai/
@@ -29,7 +28,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://ray-tsai.com
+url: https://mingjuitsai.com
 host:    127.0.0.1
 baseurl: ""
 
