@@ -1,3 +1,4 @@
+@use 'sass:math';
 // The main function that brings it all together
 @function ms($Value: 0, $Bases: $ms-base, $Ratios: $ms-ratio) {
 

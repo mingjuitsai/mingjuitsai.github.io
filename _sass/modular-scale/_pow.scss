@@ -1,5 +1,6 @@
 // If a native exponent function doesnt exist
 // this one is needed.
+@use 'sass:math';
 @function ms-pow($Base, $Exponent) {
 
   // Find and remove unit.
