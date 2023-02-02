@@ -6,7 +6,7 @@
   // Find and remove unit.
   // Avoids messyness with unit calculations
   $Unit: $Base * 0 + 1;
-  $Base: calc($Base/$Unit);
+  $Base: math.div($Base, $Unit);
 
   // This function doesnt support non-interger exponents.
   // Warn the user about why this is breaking.
