@@ -18,7 +18,7 @@ $browser-context: 15;
     $context: $context * 1px;
   }
 
-  @return decimal-round( math.div($pixels, $context), 2) * 1em;
+  @return decimal-round( $pixels / $context, 2) * 1em;
 }
 @function rem($pixels, $context: $browser-context) {
   @if (unitless($pixels)) {
@@ -29,7 +29,7 @@ $browser-context: 15;
     $context: $context * 1px;
   }
 
-  @return decimal-round( math.div($pixels, $context), 2) * 1rem;
+  @return decimal-round( $pixels / $context, 2) * 1rem;
 }
 
 /*============================
@@ -54,11 +54,11 @@ $browser-context: 15;
         $n: $n * 10;
     }
     @if $mode == round {
-        @return math.div(round($number * $n), $n);
+        @return round($number * $n) / $n;
     } @else if $mode == ceil {
-        @return math.div(ceil($number * $n), $n);
+        @return ceil($number * $n) / $n;
     } @else if $mode == floor {
-        @return math.div(floor($number * $n), $n);
+        @return floor($number * $n) / $n;
     } @else {
         @warn '#{ $mode } is undefined keyword.';
         @return $number;

@@ -6,7 +6,7 @@
   // Find and remove unit.
   // Avoids messyness with unit calculations
   $Unit: $Base * 0 + 1;
-  $Base: math.div($Base, $Unit);
+  $Base: $Base / $Unit;
 
   // This function doesnt support non-interger exponents.
   // Warn the user about why this is breaking.
@@ -31,7 +31,7 @@
   @else {
     // Libsass doesnt allow negitive values in loops
     @for $i from (-1 + 1) to (abs($Exponent) + 1) {
-      $Return: math.div($Return, $Base);
+      $Return: $Return / $Base;
     }
   }
 
