@@ -50,7 +50,7 @@ permalink: /works/
 <!-- MRI PRO -->
 <article class="work-item">
   <h3>MRI PRO</h3>
-  <a target="_blank" href="http://mripro.plot.net.au/">
+  <a target="_blank" href="https://www.mripro.io/">
     <figure class="work-item__video">
       <video src="{{ site.baseurl }}/videos/mripro.mp4" poster="{{ site.baseurl }}/images/mripro.jpeg">
         Sorry, your browser doesn't support embedded videos.
