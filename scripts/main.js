@@ -89,8 +89,8 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
 
   // DOM Ready
   function DOM_ready() {
-    const cleanup = initTypingEffectHeadings();
-    window.addEventListener("unload", cleanup);
+    const cleanUpTypingEffectHeadings = initTypingEffectHeadings();
+    window.addEventListener("unload", cleanUpTypingEffectHeadings);
     handlWorkItemVideos();
   }
 
@@ -143,6 +143,7 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
         inactiveRoles = inactiveRoles.filter((role) => role !== nextRole);
 
         await pickedEffectRef.delete();
+        // pause to make delete to type animantion smoother
         await new Promise((resolve) => setTimeout(resolve, 50));
         await pickedEffectRef.type(nextRole);
 
