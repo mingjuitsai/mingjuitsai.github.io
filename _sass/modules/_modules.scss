@@ -1,19 +1,18 @@
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
-    max-width: none;
+  max-width: none;
 }
 
 .date {
-    font-style: italic;
-    color: $gray;
+  font-style: italic;
+  color: $gray;
 }
 
 .divider {
-    padding-bottom: ms(8);
-    margin-bottom: ms(8);
-    border-bottom: 1px solid $lightGray;
+  padding-bottom: ms(8);
+  margin-bottom: ms(8);
+  border-bottom: 1px solid $lightGray;
 }
-
 
 /*----------  Buttons  ----------*/
 @mixin proto-button($type, $button-base: 16px) {
@@ -29,10 +28,10 @@
   font-weight: 300;
   cursor: pointer;
   color: white;
-  border-radius: .5em;
-  
+  border-radius: 0.5em;
+
   // Default
-  @if(str-index($type, 'default')) {
+  @if (str-index($type, "default")) {
     background-color: transparent;
     border: solid 1px $purple;
     color: $purple;
@@ -41,9 +40,9 @@
     transition-timing-function: $easeOutSine;
 
     &:hover {
-      color: white;
-      border-color: $lightPurple;
-      background-color: $lightPurple;
+      color: $purple;
+      border-color: darken($purple, 10%);
+      background-color: rgba($purple, 0.1);
     }
   }
 }
@@ -55,8 +54,6 @@
   @include proto-button(primary);
 }
 
-
-
 /*----------  List  ----------*/
 .skills-list {
   padding-left: 0;
@@ -64,13 +61,13 @@
 
   > li {
     display: inline-block;
-    margin-bottom: .5em;
-    margin-right: .4em;
-    padding: .4em 1em;
+    margin-bottom: 0.5em;
+    margin-right: 0.4em;
+    padding: 0.4em 1em;
     // style
     background-color: $lighterGray;
     border: solid 1px $lightGray;
-    border-radius: .2em;
+    border-radius: 0.2em;
     text-align: center;
     cursor: default;
     transition-property: background-color;
@@ -78,7 +75,7 @@
     transition-timing-function: $easeOutSine;
 
     &:hover {
-      background-color: darken($lighterGray, .8%);
+      background-color: darken($lighterGray, 0.8%);
     }
   }
 }

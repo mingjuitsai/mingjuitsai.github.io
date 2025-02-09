@@ -1,57 +1,58 @@
 /**
- * Plugin
+ * TypingEffect
  */
-// Szko, simple Promise style typing effect
-var Szko = function (e, t) {
-  var n = t && t.speed ? t.speed : 50;
-  (this.ele = e instanceof Element ? e : document.querySelector(e)),
-    (this.initial_string = this.ele.textContent),
-    (this["delete"] = function () {
-      var e = this,
-        t = e.ele.textContent,
-        i = new Promise(function (i, s) {
-          function o() {
-            l > 0
-              ? ((t = t.slice(0, -1)),
-                (e.ele.textContent = t),
-                l--,
-                e.ele.classList.contains("removing") ||
-                  e.ele.classList.add("removing"),
-                setTimeout(function () {
-                  o();
-                }, n))
-              : (e.ele.classList.contains("removing") &&
-                  e.ele.classList.remove("removing"),
-                i(e));
-          }
-          var l = t.length;
-          o();
-        });
-      return i;
-    }),
-    (this.type = function (e) {
-      var t = this;
-      if (!t.ele.textContent.length) {
-        new Promise(function (i, s) {
-          function o() {
-            l < e.length
-              ? ((t.ele.textContent += e.charAt(l)),
-                l++,
-                t.ele.classList.contains("typing") ||
-                  t.ele.classList.add("typing"),
-                setTimeout(function () {
-                  o();
-                }, n))
-              : (t.ele.classList.contains("typing") &&
-                  t.ele.classList.remove("typing"),
-                i(t));
-          }
-          var l = 0;
-          o();
-        });
-      }
+class TypingEffect {
+  constructor(element, options = {}) {
+    this.element =
+      element instanceof Element ? element : document.querySelector(element);
+    this.speed = options.speed || 50;
+    this.initialText = this.element.textContent;
+  }
+
+  delete() {
+    return new Promise((resolve) => {
+      const deleteChar = () => {
+        const currentText = this.element.textContent;
+        if (currentText.length === 0) {
+          this.element.classList.remove("removing");
+          resolve(this);
+          return;
+        }
+
+        this.element.classList.add("removing");
+        this.element.textContent = currentText.slice(0, -1);
+        setTimeout(deleteChar, this.speed);
+      };
+
+      deleteChar();
     });
-};
+  }
+
+  type(text) {
+    return new Promise((resolve) => {
+      if (this.element.textContent.length > 0) {
+        resolve(this);
+        return;
+      }
+
+      let currentIndex = 0;
+      const typeChar = () => {
+        if (currentIndex >= text.length) {
+          this.element.classList.remove("typing");
+          resolve(this);
+          return;
+        }
+
+        this.element.classList.add("typing");
+        this.element.textContent += text[currentIndex];
+        currentIndex++;
+        setTimeout(typeChar, this.speed);
+      };
+
+      typeChar();
+    });
+  }
+}
 
 /**
  * Helpers
@@ -88,63 +89,75 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
 
   // DOM Ready
   function DOM_ready() {
-    start_descriptions_animation();
-    handle_workItem_videos();
+    const cleanup = initTypingEffectHeadings();
+    window.addEventListener("unload", cleanup);
+    handlWorkItemVideos();
   }
+
+  function getRandomFromArray(array) {
+    if (!Array.isArray(array)) {
+      throw new Error("Input is not an array");
+    }
+    if (array.length === 0) {
+      throw new Error("Array is empty");
+    }
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  const ROLES = [
+    "Developer",
+    "Architect",
+    "Creator",
+    "Craftsman",
+    "Trader",
+    "Gamer",
+    "Hodler",
+    "Explorer",
+    "Hooper",
+  ];
 
   // Events
-  function start_descriptions_animation() {
-    var headings = ["Hooper", "Coffee Lover", "Gamer", "Trader"];
+  function initTypingEffectHeadings() {
+    const roleRefs = querySelectorAll(".site-description__typing-heading");
+    if (roleRefs.length === 0) return;
 
-    var descs = querySelectorAll(".site-description__typing-heading");
-    var descs_szko = [];
+    // Create a Set for O(1) lookup
+    const activeRoles = new Set(roleRefs.map((ref) => ref.textContent));
+    let inactiveRoles = ROLES.filter((role) => !activeRoles.has(role));
 
-    // Init Szko typing effect
-    // push current heading into heading array data
-    descs.forEach(function (desc, index) {
-      descs_szko.push(
-        new Szko(desc, {
-          speed: 40,
-        })
-      );
-      headings.push(desc.textContent);
-    });
+    const roleTypingEffectRefs = roleRefs.map(
+      (ref) => new TypingEffect(ref, { speed: 40 })
+    );
 
-    // Start animation loop
-    // Fire a quick one then slow it down...
-    setTimeout(function () {
-      update_description_randomly();
+    let isAnimating = false;
+    const intervalId = setInterval(async () => {
+      if (isAnimating) return; // Prevent overlapping animations
 
-      setInterval(update_description_randomly, 8000);
-    }, 4000);
+      try {
+        isAnimating = true;
+        const pickedEffectRef = getRandomFromArray(roleTypingEffectRefs);
+        const currentRole = pickedEffectRef.element.textContent;
 
-    function update_description_randomly() {
-      // Grab random szko instance
-      var rand_index = Math.round(Math.random() * (descs_szko.length - 1));
-      // Find filtered heading
-      var filtered_heading = headings.filter(function (val) {
-        return (
-          descs_szko.findIndex(function (szko) {
-            return szko.ele.textContent === val;
-          }) === -1
-        );
-      });
-      // Get next random heading
-      var rand_index_heading = Math.round(
-        Math.random() * (filtered_heading.length - 1)
-      );
-      var next_heading = filtered_heading[rand_index_heading];
-      // Do the typing effect magic
-      descs_szko[rand_index].delete().then(function (szko) {
-        setTimeout(function () {
-          szko.type(next_heading);
-        }, 50);
-      });
-    }
+        // Get next role randomly instead of always using first
+        const nextRole = getRandomFromArray(inactiveRoles);
+        inactiveRoles = inactiveRoles.filter((role) => role !== nextRole);
+
+        await pickedEffectRef.delete();
+        await new Promise((resolve) => setTimeout(resolve, 50));
+        await pickedEffectRef.type(nextRole);
+
+        inactiveRoles.push(currentRole);
+      } finally {
+        isAnimating = false;
+      }
+    }, 8000);
+
+    // Cleanup function (should be called when component unmounts)
+    return () => clearInterval(intervalId);
   }
 
-  function handle_workItem_videos() {
-    var scroller = scrollama();
+  function handlWorkItemVideos() {
+    const scroller = scrollama();
     scroller
       .setup({
         step: ".work-item__video", // required,
@@ -154,8 +167,8 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
       .onStepExit(handleVideoExit);
 
     function handleVideoEnter(data) {
-      var video_container = data.element;
-      var video = video_container.querySelector("video");
+      const video_container = data.element;
+      const video = video_container.querySelector("video");
 
       video_container.classList.add("in-view");
 
@@ -171,8 +184,8 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
     }
 
     function handleVideoExit(data) {
-      var video_container = data.element;
-      var video = video_container.querySelector("video");
+      const video_container = data.element;
+      const video = video_container.querySelector("video");
 
       video_container.classList.remove("in-view");
 

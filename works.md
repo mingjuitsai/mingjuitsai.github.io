@@ -5,7 +5,6 @@ permalink: /works/
 ---
 
 <section class="works">
-  
 
 <!-- Piermont -->
 <article class="work-item">
@@ -45,12 +44,10 @@ permalink: /works/
 
 <div class="divider"></div>
 
-
-
 <!-- MRI PRO -->
 <article class="work-item">
   <h3>MRI PRO</h3>
-  <a target="_blank" href="https://www.mripro.io/">
+  <a target="_blank" href="https://www.mripro.io/demo">
     <figure class="work-item__video">
       <video src="{{ site.baseurl }}/videos/mripro.mp4" poster="{{ site.baseurl }}/images/mripro.jpeg">
         Sorry, your browser doesn't support embedded videos.
@@ -78,7 +75,7 @@ permalink: /works/
   <li>WordPress</li>
 </ul>
 
-<a target="_blank" class="button-default" href="http://mripro.plot.net.au/demo">
+<a target="_blank" class="button-default" href="https://www.mripro.io/demo">
   Try demo
 </a>
 </article>

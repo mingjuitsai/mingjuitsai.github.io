@@ -2,7 +2,7 @@
 name: Ray Tsai
 
 # Short bio or description (displayed in the header)
-description: Web Designer / Developer / Explorer
+description: Developer / Architect / Creator
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars0.githubusercontent.com/u/4031732?v=3&s=460
@@ -29,7 +29,7 @@ google_analytics:
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
 url: https://mingjuitsai.com
-host:    127.0.0.1
+host: 127.0.0.1
 baseurl: ""
 
 #
@@ -39,22 +39,48 @@ baseurl: ""
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
-version: v4.3.2
+version: v4.4.1
 
 # Set the Sass partials directory, as we're using @imports
 sass:
   sass_dir: _sass
-  style: :compressed # You might prefer to minify using :compressed
+  # style: :compressed # You might prefer to minify using :compressed
 
 # Use the following plug-ins
 plugins:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - octopress-minify-html
+  - jekyll-sitemap
+  - jekyll-minifier
+
+jekyll-minifier:
+  preserve_php: true
+  remove_comments: true
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_intertag_spaces: true
+  remove_quotes: false
+  compress_css: true
+  compress_javascript: true
+  compress_json: true
+  simple_doctype: false
+  remove_script_attributes: false
+  remove_style_attributes: false
+  remove_link_attributes: false
+  remove_form_attributes: false
+  remove_input_attributes: false
+  remove_javascript_protocol: false
+  remove_http_protocol: false
+  remove_https_protocol: false
+  preserve_line_breaks: false
+  simple_boolean_attributes: false
+  compress_js_templates: false
+  preserve_patterns: []
+  uglifier_args:
+    harmony: true
 
 # Exclude these files from your production _site
 exclude:
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
-    - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
