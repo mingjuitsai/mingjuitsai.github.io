@@ -89,72 +89,7 @@ Object.defineProperty(HTMLMediaElement.prototype, "playing", {
 
   // DOM Ready
   function DOM_ready() {
-    const cleanUpTypingEffectHeadings = initTypingEffectHeadings();
-    window.addEventListener("unload", cleanUpTypingEffectHeadings);
     handlWorkItemVideos();
-  }
-
-  function getRandomFromArray(array) {
-    if (!Array.isArray(array)) {
-      throw new Error("Input is not an array");
-    }
-    if (array.length === 0) {
-      throw new Error("Array is empty");
-    }
-    return array[Math.floor(Math.random() * array.length)];
-  }
-
-  const ROLES = [
-    "Developer",
-    "Architect",
-    "Creator",
-    "Craftsman",
-    "Trader",
-    "Gamer",
-    "Hodler",
-    "Explorer",
-    "Hooper",
-  ];
-
-  // Events
-  function initTypingEffectHeadings() {
-    const roleRefs = querySelectorAll(".site-description__typing-heading");
-    if (roleRefs.length === 0) return;
-
-    // Create a Set for O(1) lookup
-    const activeRoles = new Set(roleRefs.map((ref) => ref.textContent));
-    let inactiveRoles = ROLES.filter((role) => !activeRoles.has(role));
-
-    const roleTypingEffectRefs = roleRefs.map(
-      (ref) => new TypingEffect(ref, { speed: 40 })
-    );
-
-    let isAnimating = false;
-    const intervalId = setInterval(async () => {
-      if (isAnimating) return; // Prevent overlapping animations
-
-      try {
-        isAnimating = true;
-        const pickedEffectRef = getRandomFromArray(roleTypingEffectRefs);
-        const currentRole = pickedEffectRef.element.textContent;
-
-        // Get next role randomly instead of always using first
-        const nextRole = getRandomFromArray(inactiveRoles);
-        inactiveRoles = inactiveRoles.filter((role) => role !== nextRole);
-
-        await pickedEffectRef.delete();
-        // pause to make delete to type animantion smoother
-        await new Promise((resolve) => setTimeout(resolve, 50));
-        await pickedEffectRef.type(nextRole);
-
-        inactiveRoles.push(currentRole);
-      } finally {
-        isAnimating = false;
-      }
-    }, 8000);
-
-    // Cleanup function (should be called when component unmounts)
-    return () => clearInterval(intervalId);
   }
 
   function handlWorkItemVideos() {
