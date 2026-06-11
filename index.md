@@ -6,53 +6,50 @@ published: true
 ---
 
 Hi, I am Ray.
-I am a front-end developer who likes to build simple and intuitive applications.
+I am fullstack developer who is passionated about building intuitive and responsive applications.
 
-Currently, I work at <a href="https://omnystudio.com/learn" target="_blank">Omny Studio</a> as a senior software engineer, building an application that manages podcast hosting and advertising. I work mainly with React, TypeScript, Graphql and Node.js. Please feel free to have a look at my <a href="https://www.linkedin.com/in/mingraytsai/" target="_blank">Linkein</a> for my full work experiences. Or download my full resume <a href="https://www.mingjuitsai.com/Ray-Tsai%20resume.pdf" target="_blank">here</a>
+I work mainly with React, Next.js, Vue.js, TypeScript, Claude Code and Node.js. Please feel free to have a look at my <a href="https://www.linkedin.com/in/mingraytsai/" target="_blank">Linkein</a> for my full work experiences.
 
 ### Key Values
-
-- Maintainable, robust code
-- Fast, response user interface
-- Intuitive, practical features
+- Maintainable and testable code
+- Functional and responsive user interface
+- Do something simple, yet better
+- Ask the right question (e.g. Should we build this?)
 
 ### Key Skills
-
 - Javascript
 - TypeScript
 - React
+- Next.js
 - Vue.js
 - Node.js
 - Graphql
 - HTML5
 - CSS
-- Sass
-- PHP
-- WordPress
+- SASS
 - Responsive Web
+- AWS (EC2, S3, Lambda)
 - Performance optimisation
 
 ### Tools / Workflow
-
-- Terminal
-- Visual Studio Code
-- Git
+- Claude Code
 - Webpack
-- NPM
-- Google Chrome
+- Vite
+- Vitest
+- Git flow
+- PlayWRight
+- DataDog
+- Sentry
+- Lighthouse
 
 ### Hobbies
-
 - Basketball
 - Trading
 - Music
 - Coffee
-- Traveling
-- Reading
 - Video gaming
 
 ### Contact
-
 - [Email](mailto:connect@mingjuitsai.com)
 - [Linkedin](http://au.linkedin.com/in/mingraytsai)
 - [GitHub](https://github.com/mingjuitsai)
